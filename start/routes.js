@@ -38,7 +38,7 @@ Route.put('/users/:id', 'UserController.update')
 Route.delete('/users/:id', 'UserController.destroy') */
 
 // Resource aplica o get,post,put,delete automaticamente
-Route.resource('users', 'UserController').apiOnly().middleware(['auth:jwt', 'is:gerent']).validator(new Map([
+Route.resource('users', 'UserController').apiOnly().validator(new Map([
   [['users.store'], ['User']], [['users.update'], ['User']]
 ]))
 
