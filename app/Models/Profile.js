@@ -8,14 +8,12 @@ class Profile extends Model {
     static get table () {
         return 'profile'
     }
-
-    candidateLevel(){
-        return this.hasOne('App/Models/CandidateLevel');
-    }
-
     user(){
         return this.hasOne('App/Models/User');
     }
+    candidateLevel(){
+        return this.belongsTo('App/Models/CandidateLevel', 'id_candidate_level', 'id');
+      }
 }
 
 module.exports = Profile

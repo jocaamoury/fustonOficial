@@ -10,6 +10,7 @@ class ProfileAddressSchema extends Schema {
       table.integer('id_profile').unsigned().references('id').inTable('profile').notNullable()
       table.integer('id_address').unsigned().references('id').inTable('address').notNullable()
       table.string('active', 1).notNullable().defaultTo('S')
+      table.timestamps()
     })
   }
 

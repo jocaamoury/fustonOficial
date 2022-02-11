@@ -4,7 +4,9 @@
 const Model = use('Model')
 
 class Specialty extends Model {
-
+    static get table () {
+        return 'specialty'
+    }
     profileSpecialty(){
         return this.belongsToMany('App/Models/ProfileSpecialty');
     }

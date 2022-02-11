@@ -44,33 +44,36 @@ Route.resource('users', 'UserController').apiOnly().validator(new Map([
 
 Route.resource('profile', 'ProfileController').apiOnly().validator(new Map([
   [['profile.store'], ['Profile']], [['profile.update'], ['Profile']]
-])).middleware('auth:jwt')
+]))
 
 Route.resource('specialty', 'SpecialtyController').apiOnly().validator(new Map([
   [['specialty.store'], ['Specialty']], [['specialty.update'], ['Specialty']]
-])).middleware('auth:jwt')
+]))
 
 Route.resource('address', 'AddressController').apiOnly().validator(new Map([
   [['address.store'], ['Address']], [['address.update'], ['Address']]
-])).middleware('auth:jwt')
+]))
 
 
 
 
-Route.resource('AddressType', 'AddressTypeController').apiOnly().validator(new Map([
+Route.resource('addressType', 'AddressTypeController').apiOnly().validator(new Map([
   [['addressType.store'], ['AddressType']], [['addressType.update'], ['AddressType']]
-])).middleware('auth:jwt')
-Route.resource('CandidateLevel', 'CandidateLevelController').apiOnly().validator(new Map([
+]))
+Route.resource('userType', 'UserTypeController').apiOnly().validator(new Map([
+  [['userType.store'], ['UserType']], [['userType.update'], ['UserType']]
+]))
+Route.resource('candidateLevel', 'CandidateLevelController').apiOnly().validator(new Map([
   [['candidateLevel.store'], ['CandidateLevel']], [['candidateLevel.update'], ['CandidateLevel']]
-])).middleware('auth:jwt')
+]))
 
-Route.resource('ProfileSpecialty', 'ProfileSpecialtyController').apiOnly().validator(new Map([
+Route.resource('profileSpecialty', 'ProfileSpecialtyController').apiOnly().validator(new Map([
   [['profileSpecialty.store'], ['ProfileSpecialty']], [['profileSpecialty.update'], ['ProfileSpecialty']]
-])).middleware('auth:jwt')
+]))
 
-Route.resource('ProfileAddress', 'ProfileAddressController').apiOnly().validator(new Map([
+Route.resource('profileAddress', 'ProfileAddressController').apiOnly().validator(new Map([
   [['profileAddress.store'], ['ProfileAddress']], [['profileAddress.update'], ['ProfileAddress']]
-])).middleware('auth:jwt')
+]))
 
 
 Route.resource('permissions', 'PermissionController').apiOnly().middleware(['auth:jwt'])

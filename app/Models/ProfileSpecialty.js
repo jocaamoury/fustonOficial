@@ -4,13 +4,18 @@
 const Model = use('Model')
 
 class ProfileSpecialty extends Model {
-
+    static get table () {
+        return 'profile_specialty'
+    }
     profile(){
         return this.belongsToMany('App/Models/Profile');
     }
 
-    profileSpecialty(){
-        return this.belongsToMany('App/Models/ProfileSpecialty');
+    profile(){
+        return this.belongsTo('App/Models/Profile', 'id_profile', 'id');
+      }
+    specialty(){
+        return this.belongsTo('App/Models/Specialty', 'id_specialty', 'id');
     }
 }
 

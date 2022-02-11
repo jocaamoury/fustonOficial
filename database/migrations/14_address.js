@@ -14,6 +14,7 @@ class AddressSchema extends Schema {
       table.string('zip_code', 60).notNullable()
       table.integer('id_address_type').unsigned().references('id').inTable('address_type').notNullable()
       table.string('active', 1).notNullable().defaultTo('S')
+      table.timestamps()
     })
   }
 

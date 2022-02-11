@@ -5,7 +5,7 @@ class Profile {
     return {
       name: 'required',
       id_candidate_level: 'required',
-      id_user: 'required',
+      user_id: 'required',
     }
   }
 

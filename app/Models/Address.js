@@ -4,10 +4,12 @@
 const Model = use('Model')
 
 class Address extends Model {
-
-    addressType(){
-        return this.hasOne('App/Models/AddressType');
+    static get table () {
+        return 'address'
     }
+    addressType(){
+        return this.belongsTo('App/Models/AddressType', 'id_address_type', 'id');
+      }
 }
 
 module.exports = Address

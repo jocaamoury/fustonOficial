@@ -5,13 +5,16 @@ const Model = use('Model')
 
 class ProfileAddress extends Model {
 
+    static get table () {
+        return 'profile_address'
+    }
     
     profile(){
-        return this.belongsToMany('App/Models/Profile');
+        return this.belongsTo('App/Models/Profile', 'id_profile', 'id');
     }
 
     address(){
-        return this.belongsToMany('App/Models/Address');
+        return this.belongsTo('App/Models/Address', 'id_address', 'id');
     }
     
 }

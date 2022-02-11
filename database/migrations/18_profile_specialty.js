@@ -10,6 +10,7 @@ class ProfileSpecialtySchema extends Schema {
       table.integer('id_profile').unsigned().references('id').inTable('profile').notNullable()
       table.integer('id_specialty').unsigned().references('id').inTable('specialty').notNullable()
       table.string('active', 1).notNullable().defaultTo('S')
+      table.timestamps()
     })
   }
 

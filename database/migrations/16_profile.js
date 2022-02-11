@@ -14,6 +14,7 @@ class ProfileSchema extends Schema {
       table.string('note', 255)
       table.integer('id_candidate_level').unsigned().references('id').inTable('candidate_level')
       table.integer('user_id').unsigned().references('id').inTable('users').notNullable()
+      table.timestamps()
     })
   }
 

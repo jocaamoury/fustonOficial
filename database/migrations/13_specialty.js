@@ -10,6 +10,7 @@ class SpecialtySchema extends Schema {
       table.string('name', 60).notNullable()
       table.string('description', 255)
       table.string('active', 1).notNullable().defaultTo('S')
+      table.timestamps()
     })
   }
 

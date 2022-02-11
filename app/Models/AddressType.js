@@ -4,7 +4,9 @@
 const Model = use('Model')
 
 class AddressType extends Model {
-
+    static get table () {
+        return 'address_type'
+    }
     address(){
         return this.belongsToMany('App/Models/Address');
     }
