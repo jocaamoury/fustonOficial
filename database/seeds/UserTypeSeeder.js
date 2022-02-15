@@ -36,6 +36,11 @@ class UserTypeSeeder {
         name: 'Gerente'
       }
     )
+    await Database.table('user_type').insert(
+      {
+        name: 'Candidato'
+      }
+    )
   }
 }
 

@@ -11,10 +11,10 @@ class User extends Model {
     super.boot()
 
     //Adicionando profile na busca principal.
-    // this.addGlobalScope(function (builder) {
-    //   builder.with('profile'),
-    //   builder.with('userType')
-    // })
+     this.addGlobalScope(function (builder) {
+       builder.with('profile'),
+       builder.with('userType')
+     })
 
     this.addHook('beforeSave', async (userInstance) => {
       if (userInstance.dirty.password) {

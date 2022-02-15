@@ -42,6 +42,10 @@ Route.resource('users', 'UserController').apiOnly().validator(new Map([
   [['users.store'], ['User']], [['users.update'], ['User']]
 ]))
 
+Route.resource('candidate', 'CandidateController').apiOnly().validator(new Map([
+  [['candidate.store'], ['Candidate']], [['candidate.update'], ['Candidate']]
+]))
+
 Route.resource('profile', 'ProfileController').apiOnly().validator(new Map([
   [['profile.store'], ['Profile']], [['profile.update'], ['Profile']]
 ]))

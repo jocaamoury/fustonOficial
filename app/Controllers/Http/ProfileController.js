@@ -8,7 +8,6 @@ class ProfileController {
 
     async show({ params }){
         const profile = await Profile.findOrFail(params.id)
-        await profile.loadMany(['candidateLevel'])
         return profile
     }
 

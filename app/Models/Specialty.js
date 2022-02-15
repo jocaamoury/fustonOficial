@@ -8,7 +8,7 @@ class Specialty extends Model {
         return 'specialty'
     }
     profileSpecialty(){
-        return this.belongsToMany('App/Models/ProfileSpecialty');
+        return this.belongsToMany('App/Models/ProfileSpecialty', 'id_specialty', 'id');
     }
 
 }
