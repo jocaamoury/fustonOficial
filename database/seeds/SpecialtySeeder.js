@@ -11,37 +11,37 @@ class SpecialtySeeder {
       await Database.table('specialty').insert(
         {
           name: 'Mobile',
-          id_specialty_type: 6
+          id_specialty_type: 5
         }
       ),
       await Database.table('specialty').insert(
         {
           name: 'Android Nativo',
-          id_specialty_type: 6
+          id_specialty_type: 5
         }
       ),
       await Database.table('specialty').insert(
         {
           name: 'IOS Nativo',
-          id_specialty_type: 6
+          id_specialty_type: 5
         }
       ),
       await Database.table('specialty').insert(
         {
           name: 'Flutter',
-          id_specialty_type: 6
+          id_specialty_type: 5
         }
       ),
       await Database.table('specialty').insert(
         {
           name: 'React Native',
-          id_specialty_type: 6
+          id_specialty_type: 5
         }
       ),
       await Database.table('specialty').insert(
         {
           name: 'Ionic',
-          id_specialty_type: 6
+          id_specialty_type: 5
         }
       ),
 

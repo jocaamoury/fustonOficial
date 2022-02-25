@@ -8,22 +8,32 @@ class SpecialtyTypeSeeder {
   async run () {
     await Database.table('specialty_type').insert(
       {
+        id: 1,
         name: 'FullStack'
       }
     ),
     await Database.table('specialty_type').insert(
       {
+        id: 2,
         name: 'Backend'
       }
     ),
     await Database.table('specialty_type').insert(
       {
+        id: 3,
         name: 'Front-end'
       }
     ),
     await Database.table('specialty_type').insert(
       {
+        id: 4,
         name: 'DevOps'
+      }
+    )
+    await Database.table('specialty_type').insert(
+      {
+        id: 5,
+        name: 'Mobile'
       }
     )
   }
