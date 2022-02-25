@@ -48,7 +48,7 @@ Route.resource('candidate', 'CandidateController').apiOnly().validator(new Map([
 
 Route.resource('profile', 'ProfileController').apiOnly().validator(new Map([
   [['profile.store'], ['Profile']], [['profile.update'], ['Profile']]
-]))
+])).middleware(['auth:jwt', 'is:Colaborador'])
 
 Route.resource('specialty', 'SpecialtyController').apiOnly().validator(new Map([
   [['specialty.store'], ['Specialty']], [['specialty.update'], ['Specialty']]
