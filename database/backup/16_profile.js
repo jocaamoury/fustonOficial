@@ -13,6 +13,7 @@ class ProfileSchema extends Schema {
       table.string('pretense', 45)
       table.string('note', 255)
       table.integer('id_candidate_level').unsigned().references('id').inTable('candidate_level')
+      table.integer('id_specialty_type').unsigned().references('id').inTable('specialty_type')
       table.integer('user_id').unsigned().references('id').inTable('users').notNullable()
       table.timestamps()
     })

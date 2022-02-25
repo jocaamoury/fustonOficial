@@ -15,7 +15,8 @@ class SpecialtyController {
     async store ({ request }) {
         const { ...data } = request.only([
           'name',
-          'description'
+          'description',
+           'id_specialty_type'
         ])
     
         const specialty = await Specialty.create(data)
@@ -40,7 +41,7 @@ class SpecialtyController {
     async destroy({ params }){
         const specialty = await Specialty.findOrFail(params.id)
         await specialty.delete()
-        return "Usuário deletado com sucesso!"
+        return "Specialidade deletada com sucesso!"
     }
 }
 

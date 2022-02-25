@@ -9,6 +9,7 @@ class SpecialtySchema extends Schema {
       table.increments('id').primary()
       table.string('name', 60).notNullable()
       table.string('description', 255)
+      table.integer('id_specialty_type').unsigned().references('id').inTable('specialty_type').notNullable()
       table.string('active', 1).notNullable().defaultTo('S')
       table.timestamps()
     })

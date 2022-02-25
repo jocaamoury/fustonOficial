@@ -67,6 +67,12 @@ Route.resource('addressType', 'AddressTypeController').apiOnly().validator(new M
 Route.resource('userType', 'UserTypeController').apiOnly().validator(new Map([
   [['userType.store'], ['UserType']], [['userType.update'], ['UserType']]
 ]))
+
+Route.resource('specialtyType', 'SpecialtyTypeController').apiOnly().validator(new Map([
+  [['specialtyType.store'], ['SpecialtyType']], [['specialtyType.update'], ['SpecialtyType']]
+]))
+
+
 Route.resource('candidateLevel', 'CandidateLevelController').apiOnly().validator(new Map([
   [['candidateLevel.store'], ['CandidateLevel']], [['candidateLevel.update'], ['CandidateLevel']]
 ]))
