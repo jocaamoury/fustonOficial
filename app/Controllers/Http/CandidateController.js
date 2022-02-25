@@ -53,6 +53,7 @@ class CandidateController {
             await profile.loadMany()
 
             const result = { ...data, ...dataProfile };
+            result['id_profile'] = profile['id'];
             result['Message'] = 'Candidato Adicionado com sucesso!';
 
             return result
@@ -98,6 +99,7 @@ class CandidateController {
         await profile.save();
 
         const result = { ...data, ...dataProfile };
+        result['id_profile'] = profile['id'];
         result['Message'] = 'Candidato Alterado com sucesso!';
 
         return result
