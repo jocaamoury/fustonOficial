@@ -8,7 +8,7 @@ class CandidateController {
         const candidate = await Candidate
         .query()
         .select('id', 'email', 'id_user_type')
-        .where('id_user_type', 15)
+        .where('id_user_type', 7)
         .fetch()
         return candidate
     }
@@ -18,7 +18,7 @@ class CandidateController {
         .query()
         .select('id', 'email', 'id_user_type')
         .where('id', params.id)
-        .where('id_user_type', 15)
+        .where('id_user_type', 7)
         .fetch()
 
         if(JSON.stringify(candidate) === '[]'){
@@ -32,7 +32,7 @@ class CandidateController {
     //Adicionando Candidato com Profile.
 
     async store ({ request, response }) {
-        const { permissions, roles, ...data } = request.only([ 'email', 'permissions', 'roles' ]); data['id_user_type'] = 15; data['password'] = 'senhafake';
+        const { permissions, roles, ...data } = request.only([ 'email', 'permissions', 'roles' ]); data['id_user_type'] = 7; data['password'] = 'senhafake';
 
         //Validador manual: verifica se o email ja existe.
         try {
@@ -73,7 +73,7 @@ class CandidateController {
 
     async update({ params, request, response }){
         const candidate = await Candidate.findOrFail(params.id);
-        const { ...data } = request.only([ 'email', ]); data['id_user_type'] = 15; data['password'] = 'senhafake';
+        const { ...data } = request.only([ 'email', ]); data['id_user_type'] = 7; data['password'] = 'senhafake';
 
         //Validador manual: verifica se o email ja existe.
         try {
