@@ -8,37 +8,44 @@ class UserTypeSeeder {
   async run () {
     await Database.table('user_type').insert(
       {
-        name: 'Administrador'
+        name: 'Administrador',
+        path: 'admin'
       }
     ),
     await Database.table('user_type').insert(
       {
-        name: 'Colaborador'
+        name: 'Colaborador',
+        path: 'colaborador'
       }
     ),
     await Database.table('user_type').insert(
       {
-        name: 'Prestador'
+        name: 'Prestador',
+        path: 'prestador'
       }
     ),
     await Database.table('user_type').insert(
       {
-        name: 'Cliente'
+        name: 'Cliente',
+        path: 'cliente'
       }
     ),
     await Database.table('user_type').insert(
       {
-        name: 'Financeiro'
+        name: 'Financeiro',
+        path: 'financeiro'
       }
     ),
     await Database.table('user_type').insert(
       {
-        name: 'Gerente'
+        name: 'Gerente',
+        path: 'gerente'
       }
     )
     await Database.table('user_type').insert(
       {
-        name: 'Candidato'
+        name: 'Candidato',
+        path: 'candidato'
       }
     )
   }
